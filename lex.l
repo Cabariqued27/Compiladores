@@ -30,7 +30,7 @@ Par-c       [")"]
 {Par-a}    {printf("\nPar-a (%s)",yytext)}
 {Par-c}    {printf("\nPar-c (%s)",yytext)}
 
- { fprintf(stderr, "Error léxico: símbolo no reconocido\n"); }
+ { printf(stderr, "Error léxico: símbolo no reconocido\n"); }
 
 
 %%
