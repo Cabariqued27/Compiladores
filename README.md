@@ -1,6 +1,7 @@
 **INTEGRANTES:**
-
-	Andres Meza
+	Jesús Angulo
+	David Cabarique
+	Luis Fernández
 
 
 **Ejecucion:**
