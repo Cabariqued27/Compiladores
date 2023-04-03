@@ -1,54 +1,36 @@
+%option noyywrap
+
 %{
-/* definición global */
+#include <stdio.h>
+#include <stdlib.h>
+int num_count = 0;
 %}
-/*definición de componentes*/
-Digito      [0-9]
-Op-sum      ["+"]
-Op-menos    ["-"]
-Op-mul      ["*"]
-Op-div      ["/"]
-
-Op-or       ["or"]
-Op-not      ["not"]
-Op-xor      ["xor"]
-Op-and      ["and"]
-
-Par-a       ["("]
-Par-c       [")"]
-
-%%
- 
- 
-{Op-sum}    {printf("\nOp-sum (%s)",yytext)}
-{Op-menos}    {printf("\nOp-menos (%s)",yytext)}
-{Op-mul}    {printf("\nOp-mul (%s)",yytext)}
-{Op-div}    {printf("\nOp-div (%s)",yytext)}
-{Op-or}    {printf("\nOp-or (%s)",yytext)}
-{Op-not}    {printf("\nOp-not (%s)",yytext)}
-{Op-xor}    {printf("\nOp-xor (%s)",yytext)}
-{Op-and}    {printf("\nOp-and (%s)",yytext)}
-{Par-a}    {printf("\nPar-a (%s)",yytext)}
-{Par-c}    {printf("\nPar-c (%s)",yytext)}
-
- { printf(stderr, "Error léxico: símbolo no reconocido\n"); }
 
 
 %%
-/* código adicional */
 
+[ \t]                    ; /* ignorar espacios y tabuladores */
+[\r\n]                   ; /* ignorar saltos de línea */
+not                      { printf("op-not = %s\n", yytext); }
+and                      { printf("op-and = %s\n", yytext); }
+or                       { printf("op-or = %s\n", yytext); }
+"("                      { printf("par-a = %s\n", yytext); }
+")"                      { printf("par-c = %s\n", yytext); }
+[0-9]+                   { printf("num%d = %s\n", ++num_count, yytext); }
+"+"                      { printf("op-sum = %s\n", yytext); }
+"*"                      { printf("op-mul = %s\n", yytext); }
+"-"                      { printf("op-menos = %s\n", yytext); }
+xor                      { printf("op-xor = %s\n", yytext); }
+"/"			 { printf("op-div = %s\n", yytext); }
+.                        { printf("ERROR Léxico!!\n"); }
 
+%%
 
+int main() {
+    freopen("entrada.txt", "r", stdin);
+    freopen("salida.txt", "w", stdout);
 
+    yylex();
 
-
-
-
-
-
-
-
-
-
-
-
-
+    return 0;
+}
