@@ -1,6 +1,6 @@
 **INTEGRANTES:**
-	Jesús Angulo
-	David Cabarique
+	Jesús Angulo,
+	David Cabarique y 
 	Luis Fernández
 
 
