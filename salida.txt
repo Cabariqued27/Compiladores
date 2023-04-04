@@ -1,0 +1,39 @@
+op-not = not
+par-a = (
+num1 = 101
+op-or = or
+ERROR Léxico!!
+par-c = )
+op-and = and
+num2 = 10
+op-sum = +
+num3 = 11
+num4 = 110110
+op-sum = +
+op-sum = +
+num5 = 1001
+op-menos = -
+num6 = 101
+op-and = and
+num7 = 11
+op-or = or
+num8 = 01
+op-xor = xor
+num9 = 10
+par-a = (
+par-a = (
+num10 = 101
+op-and = and
+num11 = 01
+op-not = not
+par-c = )
+ERROR Léxico!!
+ERROR Léxico!!
+par-a = (
+num12 = 110
+op-xor = xor
+num13 = 11
+par-c = )
+par-c = )
+op-mul = *
+num14 = 10
