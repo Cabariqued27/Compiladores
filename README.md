@@ -1,6 +1,8 @@
 **INTEGRANTES:**
 
-	Andres Meza
+	- Jesus Angulo
+    -
+    -
 
 
 **Ejecucion:**
