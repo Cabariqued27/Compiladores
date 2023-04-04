@@ -1,7 +1,7 @@
 **INTEGRANTES:**
-	Jesús Angulo,
-	David Cabarique y 
-	Luis Fernández
+	- Jesús Angulo
+	- David Cabarique 
+	- Luis Fernández
 
 
 **Ejecucion:**
